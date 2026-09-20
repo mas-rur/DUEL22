@@ -16,7 +16,7 @@
       "extends": "base",
       "autoIncrement": true,
       "android": {
-        "image": "ubuntu-22.04-jdk-17-ndk-26b"
+        "image": "ubuntu-26.04-jdk-17-ndk-r27b-sdk-58"
       }
     }
   },
