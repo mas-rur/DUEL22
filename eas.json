@@ -14,7 +14,10 @@
     },
     "production": {
       "extends": "base",
-      "autoIncrement": true
+      "autoIncrement": true,
+      "android": {
+        "image": "ubuntu-24.04-jdk-17"
+      }
     }
   },
   "submit": {
