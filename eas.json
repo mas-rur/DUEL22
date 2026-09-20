@@ -16,7 +16,7 @@
       "extends": "base",
       "autoIncrement": true,
       "android": {
-        "image": "ubuntu-20.04-jdk-17"
+        "image": "ubuntu-22.04-jdk-17"
       }
     }
   },
