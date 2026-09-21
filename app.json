@@ -26,9 +26,12 @@
         "backgroundColor": "#060B14"
       }
     },
-    "web": {
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": []
-  }
-}
+         "web": {
+       "favicon": "./assets/images/favicon.png"
+     },
+    "plugins": [],
+    "extra": {
+      "eas": {
+        "projectId": "ff940a48-5c05-4f8d-b0f7-746bb77ba686"
+      }
+    }
