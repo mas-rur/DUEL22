@@ -9,6 +9,26 @@ Maps to the DUEL22 PRD: multi-currency wallet, cross-border remittance,
 P2P transfers, recipient verification before sending, and transparent
 network-fee-only pricing (no hidden charges).
 
+## Build in the cloud with EAS (your connected Expo account)
+
+I can't run this step myself — it needs your Expo login session and network
+access, neither of which this sandbox has. Run these on your machine, from
+inside the project folder:
+
+```bash
+npm install -g eas-cli      # skip if already installed
+eas login                   # uses your connected Expo account
+eas build:configure         # links this project to your Expo account (writes a projectId into app.json)
+eas build --platform android --profile preview   # cloud build -> installable .apk
+```
+
+`eas.json` (already included) defines two profiles:
+- **preview** — builds a `.apk` you can sideload straight onto a phone or share for testing. This is the one to use first.
+- **production** — builds an `.aab` for the Play Store; follow with `eas submit --platform android` to upload it.
+
+The build runs entirely on Expo's servers — you'll get a QR code / download
+link in the terminal when it's done (usually 10–20 min).
+
 ## Setup
 
 Because package versions drift over time, the most reliable way to run this
@@ -65,6 +85,15 @@ src/
 | KYC | UI only — plug in a real provider (Onfido, Sumsub, etc.) |
 | Sending money / on-chain settlement | Simulated with a timeout — replace with real Solana + ledger calls |
 | Network fee | Hardcoded at $0.02 for the prototype — pull the live network fee at send time |
+
+## Assets
+
+`assets/images/icon.png`, `adaptive-icon.png`, `favicon.png`, and
+`splash.png` are generated from your real logo files (the monogram mark for
+the icon, the DUEL22 wordmark for the splash screen), composited onto the
+brand's navy glow background. Swap them for final exports from your
+designer any time — same filenames, same expected sizes (1024×1024 for
+icons, 1200×1200 for splash).
 
 ## Design notes
 
